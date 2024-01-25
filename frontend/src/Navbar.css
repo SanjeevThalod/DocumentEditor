@@ -1,0 +1,38 @@
+.navbar{
+    background-image: linear-gradient(45deg,blueviolet,white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.item1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+}
+.item1 div{
+    color: white;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px white;
+    margin: 5px;
+    background-image: linear-gradient(10deg,blue,white);
+}
+.item2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 25%;
+}
+.item2 div{
+    color: white;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px white;
+    margin: 5px;
+    background-image: linear-gradient(10deg,blue,white);
+}

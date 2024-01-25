@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #F3F3F3;
+    margin: 0%;
+}
+.ql-container{
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+.ql-toolbar {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #c7c3c3;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+}
+.textContainer .ql-editor{
+    width: 8.5in;
+    min-height: 11in;
+    padding: 1in;
+    margin: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    background-color: white;
+}
