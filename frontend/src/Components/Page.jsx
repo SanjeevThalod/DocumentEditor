@@ -99,7 +99,6 @@ const Page = () => {
     const inteval = setInterval(()=>{
       if(socket == null || quill == null) return ;
       //socket.emit("save-doc",{ id:id, delta: quill.getContents() });
-      console.log(quill.getContents());
     },8000);
 
     return ()=>{

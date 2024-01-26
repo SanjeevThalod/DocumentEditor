@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     ,
     collaborations: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
+        ref: 'documents'
     }]
 });
 

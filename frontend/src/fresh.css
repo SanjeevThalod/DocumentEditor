@@ -1,0 +1,50 @@
+.fresh{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.fresh div{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.fresh label{
+    font-size: 35px;
+    margin-bottom:30px ;
+    text-shadow: 0px 0px 8px rgba(9, 251, 251,0.7);
+}
+.fresh input{
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 8px 0px aqua;
+    font-size: 22px;
+}
+.fresh input::placeholder{
+    padding-left: 20px;
+}
+.fresh span{
+    font-size: 20px;
+    background-color: aqua;
+    height: 50px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0px 0px 8px 0px silver;
+}
+
+.fresh span:hover{
+    cursor: pointer;
+    scale: 1.1;
+}

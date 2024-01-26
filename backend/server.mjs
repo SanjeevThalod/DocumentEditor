@@ -2,9 +2,7 @@ import app from "./app.mjs";
 import db from "./Config/database.mjs";
 import dotenv from 'dotenv';
 import {Server as SocketServer} from "socket.io";
-import { findOrCreate } from "./Controllers/documentController.mjs";
 import Document from "./Schema/documentSchema.mjs";
-import { fetchById } from "./Controllers/userController.mjs";
 import jwt from "jsonwebtoken";
 import User from "./Schema/userSchema.mjs";
 
@@ -24,11 +22,6 @@ const io = new SocketServer(httpServer,{
 });
 
 io.on("connection",socket=>{
-    // socket.on("get-document",async documentId=>{
-    //     const document = await findOrCreate(documentId);
-    //     const data = "";
-    //     socket.join(documentId)
-    // });
 
     socket.on("first-document", async (token,id)=>{
         const decode = await jwt.verify(token,process.env.JWT_SECRET);
@@ -57,15 +50,5 @@ io.on("connection",socket=>{
         }
         
     })
-
-    //socket.emit("load-document",document.data);
-
-    // socket.on("send-changes",delta=>{
-    //     //socket.broadcast.to(documentId).emit("recieve-change",delta);
-    // });
-
-    // socket.on("save-document", async data => {
-    //     // await Document.findByIdAndUpdate(documentId,{data});
-    // })
     console.log("User Connected");
 });
