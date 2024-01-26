@@ -26,7 +26,7 @@ io.on("connection",socket=>{
     socket.on("first-document", async (token,id)=>{
         const decode = await jwt.verify(token,process.env.JWT_SECRET);
         const found = await User.findById(decode._id);
-        if (found.documents.includes(id)) {
+        if (found.documents.includes(id) || found.collaborations.includes(id)) {
             const data = await Document.findById(id);
             socket.emit("first-document-get", data);
         } else {

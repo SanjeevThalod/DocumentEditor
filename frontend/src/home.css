@@ -18,29 +18,32 @@
     overflow-y: scroll;
     max-height: 100px;
 }
-.conti a li{
+.conti li{
     text-decoration: none;
     background-color: white;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 30px;
 }
 .conti a {
     text-decoration: none;
-    color: black;
-    background-color: white;
     padding: 10px;
-    display: block;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
 }
-.conti a i{
+.conti li i{
     background-color: aqua;
     color: white;
     padding: 5px;
     border-radius: 50%;
     font-weight: 900;
 }
-.conti a i:hover{
+.conti li i:hover{
     scale:1.05;
+    cursor: pointer;
 }
 #dialog{
     position: absolute;
@@ -75,9 +78,42 @@
     box-shadow: 0px 0px 8px 0px aqua;
     font-size: 22px;
 }
-#dialog i{
-    position: relative;
-    top: 0%;
-    right: 0%;
-    display: block;
+#cross{
+    transform: translate(500px,-160px);
+    font-size: 30px;
+    font-weight: 900;
+}
+#cross:hover{
+    color: white;
+    cursor: pointer;
+}
+.res{
+    max-height: 200px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    margin-top: 40px;
+}
+.users{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.users >div:nth-child(2){
+    background-color: aqua;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.users >div:nth-child(2):hover{
+    scale:1.05;
+    cursor: pointer;
 }
