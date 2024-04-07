@@ -40,11 +40,6 @@ export default function SignUp() {
     const handleChange = (event) => {
         setcredentials({ ...credentials, [event.target.name]: event.target.value });
     }
-    useEffect(()=>{
-        if(localStorage.getItem("authToken") !== undefined){
-            navigate('/');
-        }
-    },[]);
     return (
         <div className="form_container">
             <form onSubmit={handleSubmit} className="form">

@@ -1,8 +1,15 @@
 .navbar{
-    background-image: linear-gradient(45deg,blueviolet,white);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    box-shadow: 0px 0px 4px 1px silver;
+}
+.navbar2{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 10px;
+    width: 80%;
 }
 .item1{
     display: flex;
@@ -10,15 +17,11 @@
     flex-wrap: wrap;
     width: 75%;
 }
-.item1 div{
-    color: white;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0px 2px 8px white;
-    margin: 5px;
-    background-image: linear-gradient(10deg,blue,white);
+.item1 img{
+    height: 50px;
+}
+.item2 img{
+    height: 35px;
 }
 .item2{
     display: flex;
@@ -26,13 +29,27 @@
     flex-wrap: wrap;
     width: 25%;
 }
-.item2 div{
-    color: white;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0px 2px 8px white;
-    margin: 5px;
-    background-image: linear-gradient(10deg,blue,white);
+.new{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.avatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.new a{
+    text-decoration: none;
+    color: black;
+}
+.dropdown-content{
+    position: relative;
+    right: 100px;
+    top: 50px;
 }

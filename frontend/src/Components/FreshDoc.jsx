@@ -37,6 +37,7 @@ const FreshDoc = () => {
                 <label>Enter Title:</label>
                 <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
                 <span onClick={()=>clickHandler()}>Create</span>
+                <a className="cancel" onClick={()=>navigate("/") }>Cancel</a>
             </div>
         </div>
     );

@@ -34,6 +34,8 @@ const Home = () => {
   const clickHandler = async (_id) => {
     if(localStorage.getItem("authToken") == null) return;
     const dialog = document.getElementById("dialog");
+    const pare = document.getElementById("pare");
+    pare.style.blurr = 0.4;
     dialog.style.visibility = "visible";
 
     try {
@@ -74,6 +76,8 @@ const Home = () => {
 
   const clickhand = () => {
     const dialog = document.getElementById("dialog");
+    const pare = document.getElementById("pare");
+    pare.style.blurr = 0;
     dialog.style.visibility = "hidden";
     setDocId("");
   };
@@ -97,9 +101,9 @@ const Home = () => {
   return (
     <div className="par">
       <Navbar />
-      <div className="pare">
+      <div className="pare" id="pare">
         <div className="conti">
-          <h2>Owned Documents:</h2>
+          <h2>Your Documents:</h2>
           <ul>
             {documents &&
               documents.map((document) => (

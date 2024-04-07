@@ -98,49 +98,14 @@ const Page = () => {
   useEffect(()=>{
     const inteval = setInterval(()=>{
       if(socket == null || quill == null) return ;
-      //socket.emit("save-doc",{ id:id, delta: quill.getContents() });
+      socket.emit("save-doc",{ id:id, delta: quill.getContents() });
     },8000);
 
     return ()=>{
-      //clearInterval(inteval);
+      clearInterval(inteval);
     }
   },[socket,quill,id]);
 
-  
-  // const fetchData = async (docId) => {
-  //   try {
-  //     const res = await fetch('http://localhost:5000/api/getById', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         id: docId,
-  //       }),
-  //     });
-  //     const result = await res.json();
-  //     setData(result.doc.data);
-  //     console.log(result.doc.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  
-  // useEffect(() => {
-    
-
-  //       if (quill && id) {
-  //         // Convert the id string to Quill Delta
-  //         fetchData(id);
-  //         const delta = quill.clipboard.convert(data);
-        
-  //         // Set the contents of the Quill editor
-  //         quill.setContents(delta);
-  //       }
-
-    
-  // }, []);
 
   return <div className='textContainer' ref={wrapperRef}></div>;
 };

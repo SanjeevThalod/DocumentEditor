@@ -1,14 +1,19 @@
 .par{
     height: 100vh;
     width: 100%;
+    align-items: center;
 }
 .pare{
     height: 90%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 5%;
     flex-wrap: wrap;
+}
+.conti{
+    width: 60%;
 }
 .pare > .conti h2{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -16,7 +21,7 @@
 
 .conti ul{
     overflow-y: scroll;
-    max-height: 100px;
+    max-height: 200px;
 }
 .conti li{
     text-decoration: none;
@@ -47,6 +52,7 @@
 }
 #dialog{
     position: absolute;
+    padding: 20px;
     background-color: aqua;
     top: 20%;
     left: 20%;
@@ -56,8 +62,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    opacity: 0.9;
     visibility: hidden;
+    min-height: 400px;
 }
 #dialog >div{
     width: 80%;
@@ -79,7 +85,9 @@
     font-size: 22px;
 }
 #cross{
-    transform: translate(500px,-160px);
+    position: relative;
+    bottom: 250px;
+    left: 750px;
     font-size: 30px;
     font-weight: 900;
 }
